@@ -1,0 +1,9 @@
+@mixin transition($arg) {
+    transition: $arg;
+    -moz-transition: $arg;
+    -webkit-transition: $arg;
+}
+
+%normalTransition {
+    @include transition(all .5s ease);
+}
