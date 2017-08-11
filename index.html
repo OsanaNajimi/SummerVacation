@@ -8,6 +8,7 @@
     <meta name="renderer" content="webkit">
     <!-- normalize -->
     <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- todo   
                 使用以下CSS套件
                 font-awesome.css
@@ -26,7 +27,8 @@
                 jquery.easing.js
     -->
     <script src="js/main.js"></script>
-    <!-- todo 使用google map api -->
+    <!-- 使用google map api -->
+    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
     <title>Website Demo</title>
 </head>
 
@@ -140,30 +142,32 @@
     </section>
     <!-- note portfolioSection -->
     <section id="portfolioSection">
-        <!-- fixme 排成四個為一排的排版 -->
-        <div class="photo" id="photo-1">
-            <h3>Project-1</h3>
-        </div>
-        <div class="photo" id="photo-2">
-            <h3>Project-2</h3>
-        </div>
-        <div class="photo" id="photo-3">
-            <h3>Project-3</h3>
-        </div>
-        <div class="photo" id="photo-4">
-            <h3>Project-4</h3>
-        </div>
-        <div class="photo" id="photo-5">
-            <h3>Project-5</h3>
-        </div>
-        <div class="photo" id="photo-6">
-            <h3>Project-6</h3>
-        </div>
-        <div class="photo" id="photo-7">
-            <h3>Project-7</h3>
-        </div>
-        <div class="photo" id="photo-8">
-            <h3>Project-8</h3>
+        <div class="photo-list">
+            <!-- fixme 排成四個為一排的排版 -->
+            <div class="photo" id="photo-1">
+                <h3>Project-1</h3>
+            </div>
+            <div class="photo" id="photo-2">
+                <h3>Project-2</h3>
+            </div>
+            <div class="photo" id="photo-3">
+                <h3>Project-3</h3>
+            </div>
+            <div class="photo" id="photo-4">
+                <h3>Project-4</h3>
+            </div>
+            <div class="photo" id="photo-5">
+                <h3>Project-5</h3>
+            </div>
+            <div class="photo" id="photo-6">
+                <h3>Project-6</h3>
+            </div>
+            <div class="photo" id="photo-7">
+                <h3>Project-7</h3>
+            </div>
+            <div class="photo" id="photo-8">
+                <h3>Project-8</h3>
+            </div>
         </div>
     </section>
     <!-- note userReviewSection -->
@@ -199,6 +203,7 @@
         <!-- 第二頁 結束 -->
     </section>
     <!-- todo 放入google map -->
+    <div id="map"></div>
     <!-- footer -->
     <footer id="footer">
         <h1 class="section-title">Contact Us</h1>
@@ -222,7 +227,8 @@
             </div>
         </div>
     </footer>
-    <!-- todo 放入go back按鈕，點擊後跳回最上方 -->
+    <!-- goBackBtn -->
+    <button id="goBackBtn">Go Back</button>
 </body>
 
 </html>

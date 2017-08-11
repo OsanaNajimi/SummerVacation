@@ -1,11 +1,16 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
-header.jumbotron:after, .photo {
+header.jumbotron:after, .photo, .photo h3 {
   transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease; }
 
 /* note general */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden; }
+
 section {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -136,9 +141,6 @@ header.jumbotron {
 #portfolioSection {
   padding-top: 0;
   padding-bottom: 0; }
-  #portfolioSection .row {
-    margin-left: 0;
-    margin-right: 0; }
 
 .photo {
   height: 250px;
@@ -151,15 +153,19 @@ header.jumbotron {
   filter: grayscale(100%); }
   .photo h3 {
     color: white;
-    font-size: 21px;
+    font-size: 6px;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 0 1px 15px rgba(0, 0, 0, 0.5);
     line-height: 250px;
     margin-top: 0;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    opacity: 0; }
   .photo:hover {
     filter: grayscale(0%); }
+    .photo:hover h3 {
+      font-size: 22px;
+      opacity: 1; }
 
 #photo-1 {
   background-image: url("../img/portfolio-1.jpg"); }
@@ -189,17 +195,16 @@ header.jumbotron {
 #slideshow .item {
   height: 270px; }
 
-.carousel-control.left,
-.carousel-control.right {
+.carousel-control.left, .carousel-control.right {
   background-image: none; }
 
 @media screen and (max-width: 767px) {
   #slideshow .item {
     height: 500px; }
-  #slideshow .item img {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto; } }
+    #slideshow .item img {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto; } }
 
 /* note footer */
 footer {
@@ -244,3 +249,31 @@ footer {
   .social-links a > i.fa:before {
     line-height: 40px;
     color: #315167; }
+
+#map {
+  width: 100%;
+  height: 400px;
+  background: #ccc; }
+
+#goBackBtn {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  color: white;
+  border: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  background-color: #315167;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); }
+  #goBackBtn:hover {
+    background: #294356; }
+  #goBackBtn:active {
+    background: #243b4b; }
+  #goBackBtn:focus {
+    outline: none; }
